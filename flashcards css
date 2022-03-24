@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    background-image: url('world.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1 {
+    text-align: center;
+    font-family: "Arial", serif;
+}
+
+.header {
+    background-color: #00c4ff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 2em;
+    width: 375px;
+    height: 30px;
+    margin: auto;
+}
+
+.container {
+    border-radius: 5%;
+    display: grid;
+    grid-template-columns: 125px 125px 125px;
+    grid-template-rows: 125px 125px 125px;
+    width: 375px;
+    height: 375px;
+    margin: 5px auto;
+    border: solid 2px red;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.container {
+    perspective: 1000px;
+
+}
+
+.card, .front, .back {
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-radius: 5%;
+    background: #f1e6e6;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #ff1500;
+    font-size: 1.2em;
+    border: solid 2px red;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    z-index: 0;
+}
+.card:nth-child(4) {
+    clear: left;
+}
+.card:nth-child(7) {
+    clear: left;
+}
+
+.front:nth-child(4) {
+    clear: left;
+}
+.front:nth-child(7) {
+    clear: left;
+}
+
+.back:nth-child(4) {
+    clear: left;
+}
+.back:nth-child(7) {
+    clear: left;
+}
+.front, .back {
+    height: 100px;
+    width: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    position: absolute;
+}
+
+.front {
+    background: white;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back {
+    background: orange;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
